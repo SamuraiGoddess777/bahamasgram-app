@@ -2,10 +2,9 @@
   import firebase from 'firebase/compat/app';
   import 'firebase/compat/auth';
   import 'firebase/compat/firestore';
+//  import firebase from "firebase";
 
-// import firebase from "firebase";
-
-  const firebaseApp = firebase.initializeApp({
+   const firebaseApp = firebase.initializeApp({
         apiKey: "AIzaSyC6Md83KmCjc9ea1GmmAMlvWT9xgvM5LTM",
         authDomain: "bahamasgram-app.firebaseapp.com",
         projectId: "bahamasgram-app",
@@ -22,3 +21,6 @@
   export { db, auth, storage };
 
 
+  
+ 
+  
