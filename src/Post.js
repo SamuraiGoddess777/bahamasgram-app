@@ -2,7 +2,8 @@ import React, {useEffect, useState } from 'react';
 import './Post.css';
 import { db } from "./firebase";
 import Avatar from '@mui/material/Avatar';
-import firebase from "firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 function Post({postId, user, username, caption, imageUrl}) {
   const [comments, setComments] = useState([]);

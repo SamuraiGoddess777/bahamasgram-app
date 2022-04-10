@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button } from "@material-ui/core";
 import { storage, db } from "./firebase";
 import './ImageUpload.css';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 function ImageUpload(username) {
     const [image, setImage] = useState(null);
@@ -21,9 +23,7 @@ function ImageUpload(username) {
             "state_changed",
             (snapshot) => {
                 // progress function...
-                const progress = Math.round(
-                    (snapshot.bytesTransferred / snapshot.totalBytes) = 100
-                );
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setProgress(progress);
             },
             (error) => {
